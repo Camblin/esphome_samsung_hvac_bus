@@ -21,12 +21,12 @@ namespace esphome
       traits.set_visual_max_temperature(30);
 
       traits.set_supported_modes({climate::CLIMATE_MODE_OFF,
-                                  this->get_map_auto_to_heat_cool() ? climate::CLIMATE_MODE_HEAT_COOL : climate::CLIMATE_MODE_AUTO,
+                                  climate::CLIMATE_MODE_AUTO,
                                   climate::CLIMATE_MODE_COOL,
                                   climate::CLIMATE_MODE_DRY,
                                   climate::CLIMATE_MODE_FAN_ONLY,
                                   climate::CLIMATE_MODE_HEAT});
-
+    
       if (device->supports_fan_modes()) {
         traits.set_supported_fan_modes({climate::CLIMATE_FAN_HIGH,
                                         climate::CLIMATE_FAN_MIDDLE,
