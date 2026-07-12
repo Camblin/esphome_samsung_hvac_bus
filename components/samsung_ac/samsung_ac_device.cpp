@@ -89,7 +89,7 @@ namespace esphome
       ProtocolRequest request;
 
       auto targetTempOpt = call.get_target_temperature();
-      if (targetTempOpt.has_value())
+      if (targetTempOpt.has_value()
         request.target_temp = targetTempOpt.value();
 
       auto modeOpt = call.get_mode();
